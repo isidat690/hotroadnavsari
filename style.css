@@ -1,0 +1,176 @@
+:root {
+  --color-bg: #121212;
+  --color-bg-hero: #000000;
+  --color-bg-card: #181818;
+  --color-bg-alt: #232323;
+  --color-text: #F4A300;         /* Use orange-gold for body text instead of white */
+  --color-text-heading: #F4A300; /* Orange-gold for headings */
+  --color-text-muted: #BFBFBF;   /* Muted/secondary text */
+  --color-accent: #F4A300;       /* Orange-gold accent */
+  --color-accent-hover: #FFCA05; /* Bright accent for hover */
+  --color-border: #F4A300;
+}
+
+/* Main font: Montserrat with fallback to Ubuntu for unique style */
+body, input, textarea, select, button {
+  font-family: 'Montserrat', 'Ubuntu', 'Segoe UI', Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: 1.09rem;
+  letter-spacing: 0.01em;
+}
+
+/* Headings: bold, uppercase, orange-gold */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', 'Ubuntu', Arial, sans-serif;
+  color: var(--color-text-heading);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Body text, list items, spans, labels: orange-gold */
+p, li, span, label, .lead, .form-label, .testimonial-name, .form-control, .form-select {
+  color: var(--color-text);
+  font-family: 'Ubuntu', 'Montserrat', Arial, sans-serif;
+  font-weight: 400;
+}
+
+/* Muted/secondary text: metallic gray */
+.text-muted, small, .carousel-caption, .card small {
+  color: var(--color-text-muted) !important;
+  font-family: 'Montserrat', 'Ubuntu', Arial, sans-serif;
+}
+
+/* Accent text: orange-gold, bold */
+.accent-text,
+.card-title.accent-text,
+.feature-card h4,
+.navbar-brand span {
+  color: var(--color-accent) !important;
+  font-weight: 700;
+  font-family: 'Montserrat', 'Ubuntu', Arial, sans-serif;
+}
+
+/* Links */
+a, a.text-accent {
+  color: var(--color-accent) !important;
+  font-family: 'Montserrat', 'Ubuntu', Arial, sans-serif;
+  font-weight: 500;
+  transition: color 0.16s;
+}
+a:hover, a.text-accent:hover {
+  color: var(--color-accent-hover) !important;
+}
+
+.text-success {
+  color: #43C86F !important;
+}
+.text-secondary {
+  color: var(--color-text-muted) !important;
+}
+.text-white {
+  color: var(--color-text) !important;
+}
+
+/* Navbar and footer */
+.navbar, .footer, #mainNavbar {
+  color: var(--color-text) !important;
+  background: var(--color-bg-hero) !important;
+  font-family: 'Montserrat', 'Ubuntu', Arial, sans-serif;
+}
+.nav-link, .footer__nav a {
+  color: var(--color-text) !important;
+  font-family: 'Montserrat', 'Ubuntu', Arial, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.nav-link.active, .nav-link:hover, .footer__nav a:hover {
+  color: var(--color-accent-hover) !important;
+}
+
+/* Cards */
+.card, .feature-card {
+  color: var(--color-text) !important;
+  background: var(--color-bg-card) !important;
+  font-family: 'Montserrat', 'Ubuntu', Arial, sans-serif;
+}
+.card-title, .feature-card h4 {
+  color: var(--color-text-heading);
+  font-family: 'Montserrat', 'Ubuntu', Arial, sans-serif;
+}
+.card .card-text {
+  color: var(--color-text);
+  font-family: 'Ubuntu', 'Montserrat', Arial, sans-serif;
+}
+
+/* Buttons */
+.btn-accent, .btn-outline-accent {
+  background: var(--color-accent);
+  color: var(--color-bg-hero) !important;
+  border-color: var(--color-accent);
+  font-family: 'Montserrat', 'Ubuntu', Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  box-shadow: 0 4px 20px rgba(244,163,0,0.16);
+  transition: background 0.18s, color 0.18s;
+}
+.btn-outline-accent {
+  background: transparent !important;
+  color: var(--color-accent) !important;
+  border: 2px solid var(--color-accent);
+}
+.btn-accent:hover, .btn-outline-accent:hover {
+  background: var(--color-accent-hover) !important;
+  color: var(--color-bg-hero) !important;
+  border-color: var(--color-accent-hover);
+}
+
+/* Form controls */
+.form-label, .form-control, .form-select {
+  color: var(--color-text);
+  font-family: 'Ubuntu', 'Montserrat', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.form-control:focus, .form-select:focus {
+  border-color: var(--color-accent-hover);
+  box-shadow: 0 0 0 0.18rem rgba(244,163,0,0.19);
+}
+
+/* Gallery images modal text */
+.modal-content.bg-dark {
+  color: var(--color-text);
+}
+
+/* Footer */
+footer {
+  color: var(--color-text-muted);
+  background: var(--color-bg-hero);
+}
+
+/* Gallery images */
+.gallery-img {
+  border: 2px solid var(--color-accent);
+  box-shadow: 0 2px 16px rgba(244,163,0,0.10);
+}
+
+/* Text shadow for hero & headings */
+.text-shadow {
+  text-shadow: 0 2px 12px #232323, 0 0px 3px var(--color-accent-hover);
+}
+
+/* Responsive tweaks for navbar/footer */
+@media (max-width: 767px) {
+  .navbar, #mainNavbar { border-bottom: 1.5px solid var(--color-accent); }
+  footer { border-top: 1.5px solid var(--color-accent); }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; background: var(--color-bg-card);}
+::-webkit-scrollbar-thumb { background: var(--color-accent); border-radius: 10px;}
+::selection { background: var(--color-accent-hover); color: var(--color-bg-hero);}
+.fab-whatsapp { position: fixed; bottom: 32px; right: 24px; z-index: 999; transition: transform 0.2s;}
+.fab-whatsapp:hover { transform: scale(1.15);}
